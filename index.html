@@ -125,6 +125,35 @@
             .financial:hover {
                 background-color: #2EC0F9;
             }
+
+            .popup {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 10;
+                pointer-events: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            .popup--key {
+                background-color:#B95F89EE;
+            }
+
+            
+            .popup--vp {
+                background-color:#9BBDF9EE;
+            }
+
+            .popup--customer {
+                background-color: #67AAF9EE;
+            }
+
+            .popup--financial {
+                background-color: #2EC0F9EE;
+            }
         </style>
     </head>
     <body>
@@ -239,15 +268,44 @@
                 </div>
             </div>
         </div>
-        <div class="popup">
+        <div class="popup popup--key" id="popup-keypartners">
+
+        </div>
+        <div class="popup popup--key" id="popup-keyactivities">
+
+        </div>
+        <div class="popup popup--key" id="popup-keyresources">
+
+        </div>
+        <div class="popup popup--vp" id="popup-valuepropositions">
+
+        </div>
+        <div class="popup popup--customer" id="popup-customerrelationships">
+
+        </div>
+        <div class="popup popup--customer" id="popup-channels">
+
+        </div>
+        <div class="popup popup--customer" id="popup-customersegments">
+
+        </div>
+        <div class="popup popup--financial" id="popup-coststructure">
+
+        </div>
+        <div class="popup popup--financial" id="popup-revenuestreams">
 
         </div>
     </body>
     <script defer>
         const bmc = document.getElementById('bmc')
+        const popups = document.getElementsByClassName('popup')
         document.addEventListener(
             'click', (event) => {
                 console.log(event.target.id)
+                for (var i = 0; i < popups.length; i++) {
+                    popups.item(i).style.opacity = 0
+                    popups.item(i).style.pointerEvents = "none"
+                }
 
                 if (event.target.classList.contains('bmc__text--full') || event.target.classList.contains('bmc__text--half')) {
                     bmc.style.opacity = .2
@@ -258,34 +316,42 @@
 
                 switch (event.target.id) {
                     case 'keypartners':
-                        
+                        document.getElementById('popup-keypartners').style.opacity = 1
+                        document.getElementById('popup-keypartners').style.pointerEvents = "auto"
                         break
                     case 'keyactivities':
-                        
+                        document.getElementById('popup-keyactivities').style.opacity = 1
+                        document.getElementById('popup-keyactivities').style.pointerEvents = "auto"
                         break
                     case 'keyresources':
-                        
+                        document.getElementById('popup-keyresources').style.opacity = 1
+                        document.getElementById('popup-keyresources').style.pointerEvents = "auto"
                         break
                     case 'valuepropositions':
-                        
+                        document.getElementById('popup-valuepropositions').style.opacity = 1
+                        document.getElementById('popup-valuepropositions').style.pointerEvents = "auto"
                         break
                     case 'customerrelationships':
-                        
+                        document.getElementById('popup-customerrelationships').style.opacity = 1
+                        document.getElementById('popup-customerrelationships').style.pointerEvents = "auto"
                         break
                     case 'channels':
-                        
+                        document.getElementById('popup-channels').style.opacity = 1
+                        document.getElementById('popup-channels').style.pointerEvents = "auto"
                         break
                     case 'customersegments':
-                        
+                        document.getElementById('popup-customersegments').style.opacity = 1
+                        document.getElementById('popup-customersegments').style.pointerEvents = "auto"
                         break
                     case 'coststructure':
-                        
+                        document.getElementById('popup-coststructure').style.opacity = 1
+                        document.getElementById('popup-coststructure').style.pointerEvents = "auto"
                         break
                     case 'revenuestreams':
-                        
+                        document.getElementById('popup-revenuestreams').style.opacity = 1
+                        document.getElementById('popup-revenuestreams').style.pointerEvents = "auto"
                         break
                     default:
-                        
                         break
                 }
             }
