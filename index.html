@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body {
+                width: 100vw;
+                height: 100vh;
+                max-width: 100vw;
+                max-height: 100vh;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(180deg, rgba(196,224,249,.1) 0%, rgba(146,196,255,.1) 35%, rgba(93,178,255,.1) 100%);
+
+                font-family: 'Gordita', 'Century Gothic', Helvetica, Arial, sans-serif
+            }
+
+            h2 {
+                margin: 10px;
+                color: #FAFAFA;
+                pointer-events: none;
+            }
+
+            p {
+                padding-left: 10px;
+                color: #222222;
+                pointer-events: none;
+            }
+
+            .bmc {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+                transition: 0.3s;
+            }
+
+            .bmc__row--top {
+                min-width: 100%;
+                min-height: 75%;
+                max-width: 100%;
+                max-height: 75%;
+                display: flex;
+            }
+
+            .bmc__row--bottom {
+                min-width: 100%;
+                min-height: 25%;
+                max-width: 100%;
+                max-height: 25%;
+                display: flex;
+            }
+
+            .bmc__column--second {
+                width: 50%;
+                height: 100%;
+                max-width: 50%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bmc__column--fifth {
+                width: 20%;
+                height: 100%;
+                max-width: 20%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bmc__text--full {
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                margin: 5px;
+                overflow: hidden;
+            }
+
+            .bmc__text--half {
+                width: calc(100% - 10px);
+                height: calc(50% - 10px);
+                max-width: 100%;
+                max-height: 50%;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                margin: 5px;
+                overflow: hidden;
+            }
+
+            .key {
+                background-color:#B95F8988;
+            }
+
+            .vp {
+                background-color: #9BBDF988;
+            }
+
+            .customer {
+                background-color: #67AAF988;
+            }
+
+            .financial {
+                background-color: #2EC0F988;
+            }
+
+            .key:hover {
+                background-color:#B95F89;
+            }
+
+            .vp:hover {
+                background-color: #9BBDF9;
+            }
+
+            .customer:hover {
+                background-color: #67AAF9;
+            }
+
+            .financial:hover {
+                background-color: #2EC0F9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bmc" id="bmc">
+            <div class="bmc__row--top">
+                <div class="bmc__column--fifth">
+                    <div class="bmc__text--full key" id="keypartners">
+                        <h2>Key Partners</h2>
+                        <p>
+                            Hosting providers<br />
+                            Internet service providers
+                        </p>
+                    </div>
+                </div>
+                <div class="bmc__column--fifth">
+                    <div class="bmc__text--half key" id="keyactivities">
+                        <h2>Key Activities</h2>
+                        <p>
+                            Graphic design<br />
+                            Front-end web development
+                        </p>
+                    </div>
+                    <div class="bmc__text--half key" id="keyresources">
+                        <h2>Key Resources</h2>
+                        <p>
+                            Graphic design skills<br />
+                            JavaScript skills<br />
+                            Computer<br />
+                            Development software<br />
+                            Graphics software<br />
+                            Financial resources (money)<br />
+                            Human resources (me)
+                        </p>
+                    </div>
+                </div>
+                <div class="bmc__column--fifth">
+                    <div class="bmc__text--full vp" id="valuepropositions">
+                        <h2>Value Propositions</h2>
+                        <p>
+                            Websites<br />
+                            User interfaces<br />
+                            Logos<br />
+                            Branding<br />
+                            Brand style guides<br />
+                            JavaScript frameworks/libraries
+                        </p>
+                    </div>
+                </div>
+                <div class="bmc__column--fifth">
+                    <div class="bmc__text--half customer" id="customerrelationships">
+                        <h2>Customer Relationships</h2>
+                        <p>
+                            <b>Customer acquisition</b><br />
+                            Advertisement<br />
+                            <b>Customer Retention</b><br />
+                            Website maintenance
+                        </p>
+                    </div>
+                    <div class="bmc__text--half customer" id="channels">
+                        <h2>Channels</h2>
+                        <p>
+                            <b>Awareness</b><br />
+                            Social media platforms<br />
+                            <b>Evaluation</b><br />
+                            Social media platforms<br />
+                            E-mail<br />
+                            <b>Purchase</b><br />
+                            Banking platform<br />
+                            <b>Delivery</b><br />
+                            Web server<br />
+                            CDN<br />
+                            Git
+                        </p>
+                    </div>
+                </div>
+                <div class="bmc__column--fifth">
+                    <div class="bmc__text--full customer" id="customersegments">
+                        <h2>Customer Segments</h2>
+                        <p>
+                            Businesses<br />
+                            Developers
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bmc__row--bottom">
+                <div class="bmc__column--second">
+                    <div class="bmc__text--full financial" id="coststructure">
+                        <h2>Cost Structure</h2>
+                        <p>
+                            Software licenses<br />
+                            Hardware expenses<br />
+                            Electricity expenses<br />
+                            Internet provider expenses<br />
+                            Hosting
+                        </p>
+                    </div>
+                </div>
+                <div class="bmc__column--second">
+                    <div class="bmc__text--full financial" id="revenuestreams">
+                        <h2>Revenue Streams</h2>
+                        <p>
+                            <b>Asset sale</b><br />
+                            Websites<br />
+                            Logos<br />
+                            Brand design<br />
+                            Frameworks/Libraries<br />
+                            <b>Subscription</b><br />
+                            Website maintenance
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup">
+
+        </div>
+    </body>
+    <script defer>
+        const bmc = document.getElementById('bmc')
+        document.addEventListener(
+            'click', (event) => {
+                console.log(event.target.id)
+
+                if (event.target.classList.contains('bmc__text--full') || event.target.classList.contains('bmc__text--half')) {
+                    bmc.style.opacity = .2
+                }
+                else {
+                    bmc.style.opacity = 1
+                }
+
+                switch (event.target.id) {
+                    case 'keypartners':
+                        
+                        break
+                    case 'keyactivities':
+                        
+                        break
+                    case 'keyresources':
+                        
+                        break
+                    case 'valuepropositions':
+                        
+                        break
+                    case 'customerrelationships':
+                        
+                        break
+                    case 'channels':
+                        
+                        break
+                    case 'customersegments':
+                        
+                        break
+                    case 'coststructure':
+                        
+                        break
+                    case 'revenuestreams':
+                        
+                        break
+                    default:
+                        
+                        break
+                }
+            }
+        )
+    </script>
+</html>
