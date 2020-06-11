@@ -314,46 +314,8 @@
                     bmc.style.opacity = 1
                 }
 
-                switch (event.target.id) {
-                    case 'keypartners':
-                        document.getElementById('popup-keypartners').style.opacity = 1
-                        document.getElementById('popup-keypartners').style.pointerEvents = "auto"
-                        break
-                    case 'keyactivities':
-                        document.getElementById('popup-keyactivities').style.opacity = 1
-                        document.getElementById('popup-keyactivities').style.pointerEvents = "auto"
-                        break
-                    case 'keyresources':
-                        document.getElementById('popup-keyresources').style.opacity = 1
-                        document.getElementById('popup-keyresources').style.pointerEvents = "auto"
-                        break
-                    case 'valuepropositions':
-                        document.getElementById('popup-valuepropositions').style.opacity = 1
-                        document.getElementById('popup-valuepropositions').style.pointerEvents = "auto"
-                        break
-                    case 'customerrelationships':
-                        document.getElementById('popup-customerrelationships').style.opacity = 1
-                        document.getElementById('popup-customerrelationships').style.pointerEvents = "auto"
-                        break
-                    case 'channels':
-                        document.getElementById('popup-channels').style.opacity = 1
-                        document.getElementById('popup-channels').style.pointerEvents = "auto"
-                        break
-                    case 'customersegments':
-                        document.getElementById('popup-customersegments').style.opacity = 1
-                        document.getElementById('popup-customersegments').style.pointerEvents = "auto"
-                        break
-                    case 'coststructure':
-                        document.getElementById('popup-coststructure').style.opacity = 1
-                        document.getElementById('popup-coststructure').style.pointerEvents = "auto"
-                        break
-                    case 'revenuestreams':
-                        document.getElementById('popup-revenuestreams').style.opacity = 1
-                        document.getElementById('popup-revenuestreams').style.pointerEvents = "auto"
-                        break
-                    default:
-                        break
-                }
+                document.getElementById('popup-'+event.target.id).style.opacity = 1
+                document.getElementById('popup-'+event.target.id).style.pointerEvents = "auto"
             }
         )
     </script>
