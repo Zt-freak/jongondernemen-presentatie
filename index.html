@@ -301,19 +301,16 @@
         const popups = document.getElementsByClassName('popup')
         document.addEventListener(
             'click', (event) => {
-                console.log(event.target.id)
                 for (var i = 0; i < popups.length; i++) {
                     popups.item(i).style.opacity = 0
                     popups.item(i).style.pointerEvents = "none"
                 }
-
                 if (event.target.classList.contains('bmc__text--full') || event.target.classList.contains('bmc__text--half')) {
                     bmc.style.opacity = .2
                 }
                 else {
                     bmc.style.opacity = 1
                 }
-
                 document.getElementById('popup-'+event.target.id).style.opacity = 1
                 document.getElementById('popup-'+event.target.id).style.pointerEvents = "auto"
             }
