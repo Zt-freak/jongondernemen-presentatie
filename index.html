@@ -390,10 +390,24 @@
             </p>
         </div>
 
-        <div class="popup popup--key" style="opacity:1;pointer-events:auto;">
+        <div class="popup popup--vp" style="opacity:1;pointer-events:auto;" id="slide-1">
             <h2>interactive jongondernemen presentation<br /><small>By Bryan Kho</small></h2>
         </div>
-
+        <div class="popup popup--financial" id="slide-2">
+            <p>
+                After some careful consideration between graphic design, web development and sex work (which Jayant suggested), I have concluded  that my hypothetical company is going to do web development and graphic design.
+            </p>
+        </div>
+        <div class="popup popup--key" id="slide-3">
+            <p>
+                I chose ZZP for my business entity type.<br />
+            </p>
+        </div>
+        <div class="popup popup--customer" id="slide-4">
+            <p>
+               After this slide, there will be an interactive Business Model Canvas.
+            </p>
+        </div>
     </body>
     <script defer>
         const bmc = document.getElementById('bmc')
@@ -409,6 +423,22 @@
                 }
                 else {
                     bmc.style.opacity = 1
+                }
+                switch (event.target.id) {
+                    case 'slide-1':
+                        document.getElementById('slide-2').style.opacity = 1
+                        document.getElementById('slide-2').style.pointerEvents = "auto"
+                        break
+                    case 'slide-2':
+                        document.getElementById('slide-3').style.opacity = 1
+                        document.getElementById('slide-3').style.pointerEvents = "auto"
+                        break
+                    case 'slide-3':
+                        document.getElementById('slide-4').style.opacity = 1
+                        document.getElementById('slide-4').style.pointerEvents = "auto"
+                        break
+                    default:
+                        break
                 }
                 document.getElementById('popup-'+event.target.id).style.opacity = 1
                 document.getElementById('popup-'+event.target.id).style.pointerEvents = "auto"
