@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <style>
+
+            * {
+                user-select: none;
+                -ms-overflow-style: none;
+            }
+
+            *::-webkit-scrollbar {
+                display: none;
+            }
+
             html, body {
                 width: 100vw;
                 height: 100vh;
@@ -9,7 +20,7 @@
                 max-height: 100vh;
                 margin: 0;
                 padding: 0;
-                background: linear-gradient(180deg, rgba(196,224,249,.1) 0%, rgba(146,196,255,.1) 35%, rgba(93,178,255,.1) 100%);
+                background: #222222;
 
                 font-family: 'Gordita', 'Century Gothic', Helvetica, Arial, sans-serif
             }
@@ -80,6 +91,7 @@
                 transition: 0.3s;
                 margin: 5px;
                 overflow: hidden;
+                overflow-y: scroll;
             }
 
             .bmc__text--half {
@@ -92,6 +104,7 @@
                 transition: 0.3s;
                 margin: 5px;
                 overflow: hidden;
+                overflow-y: scroll;
             }
 
             .key {
@@ -136,6 +149,8 @@
                 pointer-events: none;
                 opacity: 0;
                 transition: 0.3s;
+
+                overflow-y: scroll;
             }
 
             .popup--key {
@@ -157,7 +172,16 @@
 
             .popup h2 {
                 text-align: center;
-                font-size: 4.5rem;
+                font-size: 8vw;
+            }
+
+            .popup h2 small{
+                font-size: 3vw;
+            }
+
+            .popup p {
+                font-size: 5vw;
+                margin: 10px;
             }
         </style>
     </head>
@@ -185,7 +209,7 @@
                         <h2>Key Resources</h2>
                         <p>
                             Graphic design skills<br />
-                            JavaScript skills<br />
+                            Web development skills<br />
                             Computer<br />
                             Development software<br />
                             Graphics software<br />
@@ -202,7 +226,6 @@
                             User interfaces<br />
                             Logos<br />
                             Branding<br />
-                            Brand style guides<br />
                             JavaScript frameworks/libraries
                         </p>
                     </div>
@@ -273,33 +296,104 @@
                 </div>
             </div>
         </div>
+
         <div class="popup popup--key" id="popup-keypartners">
             <h2>Key Partners</h2>
+            <p>
+                I require the service of an <b>internet service provider</b> for communication with customers, development and accessing cloud storage.
+            </p>
+            <p>
+                I require the service of a <b></b>hosting provider</b> in order to host customers' sites as well as my own sites and CDNs.
+            </p>
         </div>
         <div class="popup popup--key" id="popup-keyactivities">
             <h2>Key Activities</h2>
+            <p>
+                <b>Graphic design</b> and <b>front-end web development</b>, it's all this two-trick pony can do. UwU ❤️
+            </p>
         </div>
         <div class="popup popup--key" id="popup-keyresources">
             <h2>Key Resources</h2>
+            <p>
+                <b>Intellectual resources</b><br />
+                Graphic design skills, in particular with Adobe Illustrator.<br />
+                Web development skills: experience with vanilla JS and PHP as well as Symfony, ReactJS and jQuery.
+                <b>Physical resources</b><br />
+                Computer, including all hardware<br />
+                Software and software licenses for for example Adobe Creative Cloud.<br />
+                <b>Human resources</b><br />
+                It is me<br />
+                <b>Financial resources</b><br />
+                Money. If I were an ancient Mesoamerican it would be cocoa beans or something.<br />
+            </p>
         </div>
         <div class="popup popup--vp" id="popup-valuepropositions">
             <h2>Value Propositions</h2>
+            <p>
+                Websites<br />
+                Brand design<br />
+                User interface<br />
+                Logos<br />
+                JS Frameworks/libraries
+            </p>
         </div>
         <div class="popup popup--customer" id="popup-customerrelationships">
             <h2>Customer Relationships</h2>
+            <p>
+                A very generalised "advertisement", because I'm drained of creativity.<br />
+                A way to keep customers is by building a long-term relationship, which can be achieved by providing a long-term service like maintenance.
+            </p>
         </div>
         <div class="popup popup--customer" id="popup-channels">
             <h2>Channels</h2>
+            <p>
+                <b>Awareness</b><br />
+                Social media platforms<br />
+                <b>Evaluation</b><br />
+                Social media platforms<br />
+                E-mail<br />
+                <b>Purchase</b><br />
+                Banking platform<br />
+                <b>Delivery</b><br />
+                Web server<br />
+                CDN<br />
+                Git
+            </p>
         </div>
         <div class="popup popup--customer" id="popup-customersegments">
             <h2>Customer Segments</h2>
+            <p>
+                Businesses<br />
+                Developers
+            </p>
         </div>
         <div class="popup popup--financial" id="popup-coststructure">
             <h2>Cost Structure</h2>
+            <p>
+                Software licenses<br />
+                Hardware expenses<br />
+                Electricity expenses<br />
+                Internet provider expenses<br />
+                Hosting
+            </p>
         </div>
         <div class="popup popup--financial" id="popup-revenuestreams">
             <h2>Revenue Streams</h2>
+            <p>
+                <b>Asset sale</b><br />
+                Websites<br />
+                Logos<br />
+                Brand design<br />
+                Frameworks/Libraries<br />
+                <b>Subscription</b><br />
+                Website maintenance
+            </p>
         </div>
+
+        <div class="popup popup--key" style="opacity:1;pointer-events:auto;">
+            <h2>interactive jongondernemen presentation<br /><small>By Bryan Kho</small></h2>
+        </div>
+
     </body>
     <script defer>
         const bmc = document.getElementById('bmc')
